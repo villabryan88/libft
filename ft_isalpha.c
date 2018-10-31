@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/30 15:22:30 by bvilla            #+#    #+#             */
-/*   Updated: 2018/10/30 19:22:48 by bvilla           ###   ########.fr       */
+/*   Created: 2018/10/31 12:12:03 by bvilla            #+#    #+#             */
+/*   Updated: 2018/10/31 12:56:41 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int		ft_isalpha(int c)
 {
-	unsigned int	i;
+	unsigned char l;
 
-	if (!haystack)
-		return (NULL);
-	while (*haystack && len)
-	{
-		i = 0;
-		while (len && len-- && haystack[i] == needle[i] && needle[i])
-			i++;
-		if (needle[i] == '\0')
-			return ((char*)haystack);
-		if (len == 0)
-			return (NULL);
-		if (i)
-			len++;
-		haystack += i ? i : 1;
-	}
-	return (NULL);
+	l = (unsigned char)c;
+	if ((c >= (unsigned char)'a' && c <= (unsigned char)'z') ||
+		(c >= (unsigned char)'A' && c <= (unsigned char)'Z'))
+		return (1);
+	return (0);
 }
