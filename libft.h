@@ -6,7 +6,7 @@
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 20:07:39 by bvilla            #+#    #+#             */
-/*   Updated: 2018/10/31 15:30:39 by bvilla           ###   ########.fr       */
+/*   Updated: 2018/11/01 16:11:18 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,15 @@ int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+
 #endif
