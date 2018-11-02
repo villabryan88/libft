@@ -6,7 +6,7 @@
 #    By: bvilla <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 20:11:16 by bvilla            #+#    #+#              #
-#    Updated: 2018/11/01 16:11:18 by bvilla           ###   ########.fr        #
+#    Updated: 2018/11/01 16:37:05 by bvilla           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SOURCE = ft_memset.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_bzero.c \
 		 ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
 		 ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c \
 		 ft_tolower.c ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c \
-		 ft_strclr.c ft_striter.c
+		 ft_strclr.c ft_striter.c ft_striteri.c
 all: 
 	gcc -Wall -Wextra -Werror -c $(SOURCE)
 	ar rc $(NAME) *.o
