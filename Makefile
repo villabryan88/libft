@@ -6,7 +6,7 @@
 #    By: bvilla <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 20:11:16 by bvilla            #+#    #+#              #
-#    Updated: 2018/11/06 14:42:44 by bvilla           ###   ########.fr        #
+#    Updated: 2018/11/06 14:53:14 by bvilla           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,23 +28,23 @@ SOURCE = srcs/ft_memset.c srcs/ft_putchar.c srcs/ft_putnbr.c srcs/ft_putstr.c \
 		 srcs/ft_putnbr_fd.c srcs/ft_strnlen.c srcs/ft_isspace.c \
 		 srcs/ft_wrdcnt.c srcs/ft_putnbrendl.c
 HEADERS = includes
-OBJS = $(SOURCE:%.c=%.o)
+OBJS = $(SOURCE:srcs/%.c=%.o)
 $(NAME): 
 	gcc -Wall -Wextra -Werror -c $(SOURCE) -I$(HEADERS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 clean:
-	rm -f *.o
+	rm -f $(OBJS)
 fclean: clean
 	rm -f $(NAME)
 all: $(NAME)
 re: fclean all
 test: re
-	rm -f *.o
+	rm -f $(OJBS)
 	gcc -Wall -Werror -Wextra ../backup/tester.c libft.a -o test
 	./test
 check: re
-	rm -f *.o
+	rm -f $(OBJS)
 	gcc -Wall -Werror -Wextra ../backup/tester.c libft.a -o test
 	gcc -o checker ../backup/checker.c
 	./test > test.txt
@@ -57,6 +57,6 @@ backup:
 	cp tester.c checker.c ../backup/
 git: 
 	git add Makefile
-	git add libft.h
-	git add ft*.c
+	git add includes/libft.h
+	git add $(SOURCS)
 	git status
