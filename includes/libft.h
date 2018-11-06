@@ -6,7 +6,7 @@
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 20:07:39 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/05 21:58:37 by bvilla           ###   ########.fr       */
+/*   Updated: 2018/11/05 22:13:48 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strnlen(const char *s, size_t maxlen);
 int		ft_isspace(int c);
 int		ft_wrdcnt(char *s, char c);
-
+void	ft_putnbrendl(int n);
 #endif
