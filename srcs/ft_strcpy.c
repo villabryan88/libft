@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 13:16:58 by bvilla            #+#    #+#             */
-/*   Updated: 2018/10/29 13:46:21 by bvilla           ###   ########.fr       */
+/*   Created: 2018/10/29 00:36:54 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 14:59:13 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char	*ret;
 
 	ret = dst;
-	while (len--)
-	{
-		*(dst++) = *(src);
-		if (*src)
-			src++;
-	}
+	while (*src)
+		*(dst++) = *(src++);
+	*dst = *src;
 	return (ret);
 }

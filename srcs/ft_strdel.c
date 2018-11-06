@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 22:12:04 by bvilla            #+#    #+#             */
-/*   Updated: 2018/10/29 23:49:38 by bvilla           ###   ########.fr       */
+/*   Created: 2018/11/01 14:35:30 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 20:03:21 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_strdel(char **as)
 {
-	char *lst;
-
-	lst = NULL;
-	while (*s)
+	if (as && *as)
 	{
-		if (*s == (char)c)
-			lst = (char*)s;
-		s++;
+		free(*as);
+		*as = NULL;
 	}
-	return (lst);
 }

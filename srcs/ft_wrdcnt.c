@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_wrdcnt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 16:37:15 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/01 17:00:10 by bvilla           ###   ########.fr       */
+/*   Created: 2018/11/05 21:55:46 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 22:03:20 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
-	unsigned int		i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i])
-	{
-		f(i, s + i);
-		i++;
-	}
+int		ft_wrdcnt(char *s, char c)
+{
+	int				words;
+	unsigned int	i;
+	unsigned int	j;
+
+	words = 0;
+	i = -1;
+	while (s && (j = (unsigned int)ft_strchr(s + (i + 1), (int)c)) &&
+			(j - (unsigned int)s - i == 1 || ++words))
+		i = j - (unsigned int)s;
+	if (s && !j && ft_strlen(s + (i + 1)) > 0)
+		words++;
+	return (words);
 }

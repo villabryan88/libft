@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/24 16:15:36 by bvilla            #+#    #+#             */
-/*   Updated: 2018/10/24 16:16:32 by bvilla           ###   ########.fr       */
+/*   Created: 2018/11/05 12:14:47 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 14:07:12 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+size_t	ft_strnlen(const char *s, size_t maxlen)
 {
-	write(1, &c, 1);
+	size_t	i;
+
+	i = 0;
+	while (i < maxlen && s[i] != '\0')
+		i++;
+	return (i);
 }

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 00:36:54 by bvilla            #+#    #+#             */
-/*   Updated: 2018/10/29 13:17:57 by bvilla           ###   ########.fr       */
+/*   Created: 2018/10/29 22:12:04 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 16:47:50 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
-{
-	char	*ret;
+#include "libft.h"
 
-	ret = dst;
-	while (*src != '\0')
-		*(dst++) = *(src++);
-	*dst = *src;
-	return (ret);
+char	*ft_strrchr(const char *s, int c)
+{
+	char *lst;
+
+	lst = NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			lst = (char*)s;
+		s++;
+	}
+	lst = *s == (char)c ? (char*)s : lst;
+	return (lst);
 }

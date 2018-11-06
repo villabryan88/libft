@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 17:03:43 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/01 17:25:14 by bvilla           ###   ########.fr       */
+/*   Created: 2018/10/30 19:24:12 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 19:53:33 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int		ft_atoi(const char *str)
 {
-	char			*ret;
-	unsigned int	i;
-	
-	i = ft_strlen(s);
-	if((ret = (char*)malloc(i + 1)))
+	int		nb;
+	int		neg;
+
+	neg = 1;
+	nb = 0;
+	while (*str && ft_isspace((int)(*str)))
+		str++;
+	if (*str == '+')
+		str++;
+	else if (*str == '-')
 	{
-		ret[i] = '\0';
-		while (i--)
-			ret[i] = f(s[i]);
-		return (ret);
+		str++;
+		neg = -1;
 	}
-	else
-		return (NULL);
+	while (*str >= '0' && *str <= '9')
+	{
+		nb = nb * 10 + (int)(*(str++) - '0');
+	}
+	return (nb * neg);
 }

@@ -6,7 +6,7 @@
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 20:07:39 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/01 19:12:01 by bvilla           ###   ########.fr       */
+/*   Updated: 2018/11/05 21:58:37 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 # include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len);
-void	ft_putchar(char c);
-void	ft_putnbr(int n);
-void	ft_putstr(char const *s);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -56,7 +53,24 @@ void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
-char	*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+size_t	ft_strnlen(const char *s, size_t maxlen);
+int		ft_isspace(int c);
+int		ft_wrdcnt(char *s, char c);
+
 #endif

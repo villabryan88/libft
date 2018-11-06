@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 19:03:08 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/01 19:04:52 by bvilla           ###   ########.fr       */
+/*   Created: 2018/11/01 18:49:58 by bvilla            #+#    #+#             */
+/*   Updated: 2018/11/05 20:07:17 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_strequ(char const *s1, char const *s2)
 {
-		return(ft_strncmp(s1, s2, n) ? 0 : 1);
+	return (s1 && s2 && ft_strcmp(s1, s2) ? 0 : 1);
 }
