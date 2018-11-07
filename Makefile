@@ -6,7 +6,7 @@
 #    By: bvilla <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 20:11:16 by bvilla            #+#    #+#              #
-#    Updated: 2018/11/06 14:53:14 by bvilla           ###   ########.fr        #
+#    Updated: 2018/11/06 19:00:09 by bvilla           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SOURCE = srcs/ft_memset.c srcs/ft_putchar.c srcs/ft_putnbr.c srcs/ft_putstr.c \
 		 srcs/ft_strtrim.c srcs/ft_strsplit.c srcs/ft_itoa.c srcs/ft_putendl.c \
 		 srcs/ft_putchar_fd.c srcs/ft_putstr_fd.c srcs/ft_putendl_fd.c \
 		 srcs/ft_putnbr_fd.c srcs/ft_strnlen.c srcs/ft_isspace.c \
-		 srcs/ft_wrdcnt.c srcs/ft_putnbrendl.c
+		 srcs/ft_wrdcnt.c srcs/ft_putnbrendl.c srcs/ft_iseven.c \
+		 srcs/ft_isneg.c srcs/ft_lstnew.c
 HEADERS = includes
 OBJS = $(SOURCE:srcs/%.c=%.o)
 $(NAME): 
