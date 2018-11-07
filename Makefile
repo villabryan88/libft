@@ -6,7 +6,7 @@
 #    By: bvilla <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 20:11:16 by bvilla            #+#    #+#              #
-#    Updated: 2018/11/06 19:00:09 by bvilla           ###   ########.fr        #
+#    Updated: 2018/11/06 19:53:28 by bvilla           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,5 +59,5 @@ backup:
 git: 
 	git add Makefile
 	git add includes/libft.h
-	git add $(SOURCS)
+	git add $(SOURCE)
 	git status
