@@ -6,7 +6,7 @@
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 20:07:39 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/06 19:00:09 by bvilla           ###   ########.fr       */
+/*   Updated: 2018/11/07 18:49:10 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,9 @@ void				ft_putnbrendl(int n);
 int					ft_iseven(int n);
 int					ft_isneg(int n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 #endif

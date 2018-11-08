@@ -6,7 +6,7 @@
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/01 18:31:51 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/05 20:19:06 by bvilla           ###   ########.fr       */
+/*   Updated: 2018/11/07 19:38:47 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	if (s)
+	if (s && f)
 		i = ft_strlen(s);
 	else
 		return (NULL);
