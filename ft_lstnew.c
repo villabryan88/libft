@@ -6,7 +6,7 @@
 /*   By: bvilla <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 16:34:05 by bvilla            #+#    #+#             */
-/*   Updated: 2018/11/06 21:34:44 by bvilla           ###   ########.fr       */
+/*   Updated: 2018/11/10 16:15:18 by bvilla           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		new->content = ft_memalloc(content_size);
+		if (!new->content)
+		{
+			free(new);
+			return (NULL);
+		}
 		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}
